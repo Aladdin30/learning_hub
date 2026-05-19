@@ -1,6 +1,6 @@
 from models.book_model import Book
 
-def create_book(db, book:Book):
+def create_book(db, book:Book) -> Book:
     db.add(book)
     db.commit()
     db.refresh(book)
